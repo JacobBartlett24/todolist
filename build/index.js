@@ -213,38 +213,77 @@ function Main() {
 // app/routes/main/index.tsx
 var main_exports2 = {};
 __export(main_exports2, {
-  default: () => MainIndex
+  action: () => action,
+  default: () => MainIndex,
+  loader: () => loader
 });
-var import_react10 = require("@chakra-ui/react"), import_react11 = require("@remix-run/react"), import_jsx_dev_runtime6 = require("react/jsx-dev-runtime");
+var import_react10 = require("@chakra-ui/react"), import_react11 = require("@remix-run/react"), import_node = require("@remix-run/node"), import_react12 = require("@remix-run/react");
+
+// app/utils/db.server.ts
+var import_client = require("@prisma/client"), db;
+global.__db || (global.__db = new import_client.PrismaClient()), db = global.__db;
+
+// app/routes/main/index.tsx
+var import_jsx_dev_runtime6 = require("react/jsx-dev-runtime");
+async function loader() {
+  return (0, import_node.json)({
+    todos: await db.todo.findMany()
+  });
+}
+async function action({ request }) {
+  let todo = (await request.formData()).get("todo").toString();
+  if (typeof todo != "string")
+    throw new Error("Form not submitted correctly.");
+  let todoTest = await db.todo.create({
+    data: { todo }
+  });
+  return console.log(todoTest.todo), (0, import_node.redirect)("/main");
+}
 function MainIndex() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Box, { display: "flex", flexDir: "row", marginTop: "2rem", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react11.Form, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Box, { display: "flex", flexDir: "column", children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Input, { color: "white", placeholder: "Title" }, void 0, !1, {
+  let data = (0, import_react12.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Box, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Box, { display: "flex", flexDir: "row", marginTop: "2rem", children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react11.Form, { method: "post", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Box, { display: "flex", flexDir: "column", children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Input, { name: "todo", color: "white", placeholder: "Title", required: !0 }, void 0, !1, {
+        fileName: "app/routes/main/index.tsx",
+        lineNumber: 42,
+        columnNumber: 13
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/main/index.tsx",
+        lineNumber: 41,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Button, { type: "submit", children: "Submit" }, void 0, !1, {
+        fileName: "app/routes/main/index.tsx",
+        lineNumber: 44,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, !0, {
       fileName: "app/routes/main/index.tsx",
-      lineNumber: 9,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/main/index.tsx",
-      lineNumber: 8,
+      lineNumber: 40,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/main/index.tsx",
-      lineNumber: 7,
+      lineNumber: 39,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Button, { children: "Submit" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Box, { display: "flex", flexDir: "column", children: data.todos.map((todo) => /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Text, { color: "white", children: todo.todo }, todo.id, !1, {
       fileName: "app/routes/main/index.tsx",
-      lineNumber: 12,
+      lineNumber: 49,
+      columnNumber: 11
+    }, this)) }, void 0, !1, {
+      fileName: "app/routes/main/index.tsx",
+      lineNumber: 47,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/main/index.tsx",
-    lineNumber: 6,
+    lineNumber: 38,
     columnNumber: 5
   }, this);
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "32127fc0", entry: { module: "/build/entry.client-BUAD3LEK.js", imports: ["/build/_shared/chunk-Y4MJVS5O.js", "/build/_shared/chunk-BNIZYPYA.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KUUTA6UI.js", imports: ["/build/_shared/chunk-NJYV44EY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-37YYISDI.js", imports: ["/build/_shared/chunk-OSL7R4HJ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/main": { id: "routes/main", parentId: "root", path: "main", index: void 0, caseSensitive: void 0, module: "/build/routes/main-NQFICGIE.js", imports: ["/build/_shared/chunk-OSL7R4HJ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/main/index": { id: "routes/main/index", parentId: "routes/main", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/main/index-BEQVBZMX.js", imports: ["/build/_shared/chunk-NJYV44EY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-32127FC0.js" };
+var assets_manifest_default = { version: "17ff3842", entry: { module: "/build/entry.client-VBOTNMF5.js", imports: ["/build/_shared/chunk-3UWPWFUS.js", "/build/_shared/chunk-BNIZYPYA.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-XMSJCS5H.js", imports: ["/build/_shared/chunk-I534BYEB.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-MRG7BHH4.js", imports: ["/build/_shared/chunk-HH53KPYL.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/main": { id: "routes/main", parentId: "root", path: "main", index: void 0, caseSensitive: void 0, module: "/build/routes/main-HN6SN4NK.js", imports: ["/build/_shared/chunk-HH53KPYL.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/main/index": { id: "routes/main/index", parentId: "routes/main", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/main/index-O37WSC6Q.js", imports: ["/build/_shared/chunk-I534BYEB.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-17FF3842.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { unstable_cssModules: !1, unstable_cssSideEffectImports: !1, unstable_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, unstable_vanillaExtract: !1, v2_errorBoundary: !1, v2_meta: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
