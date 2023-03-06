@@ -46,7 +46,10 @@ export default function MainIndex() {
       </Box>
       <Box display={"flex"} flexDir={"column"}>
         {data.todos.map((todo: Todo) => (
-          <Text color={"white"} key={todo.id}>{todo.todo}</Text>
+          <Box display={"flex"} flexDir={"row"}>
+            <Text color={"white"} key={todo.id}>{todo.todo}</Text>
+            <Button>X</Button>
+          </Box>
         ))}
       </Box>
     </Box>

@@ -266,7 +266,18 @@ function MainIndex() {
       lineNumber: 39,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Box, { display: "flex", flexDir: "column", children: data.todos.map((todo) => /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Text, { color: "white", children: todo.todo }, todo.id, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Box, { display: "flex", flexDir: "column", children: data.todos.map((todo) => /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Box, { display: "flex", flexDir: "row", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Text, { color: "white", children: todo.todo }, todo.id, !1, {
+        fileName: "app/routes/main/index.tsx",
+        lineNumber: 50,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react10.Button, { children: "X" }, void 0, !1, {
+        fileName: "app/routes/main/index.tsx",
+        lineNumber: 51,
+        columnNumber: 13
+      }, this)
+    ] }, void 0, !0, {
       fileName: "app/routes/main/index.tsx",
       lineNumber: 49,
       columnNumber: 11
@@ -283,7 +294,7 @@ function MainIndex() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "17ff3842", entry: { module: "/build/entry.client-VBOTNMF5.js", imports: ["/build/_shared/chunk-3UWPWFUS.js", "/build/_shared/chunk-BNIZYPYA.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-XMSJCS5H.js", imports: ["/build/_shared/chunk-I534BYEB.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-MRG7BHH4.js", imports: ["/build/_shared/chunk-HH53KPYL.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/main": { id: "routes/main", parentId: "root", path: "main", index: void 0, caseSensitive: void 0, module: "/build/routes/main-HN6SN4NK.js", imports: ["/build/_shared/chunk-HH53KPYL.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/main/index": { id: "routes/main/index", parentId: "routes/main", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/main/index-O37WSC6Q.js", imports: ["/build/_shared/chunk-I534BYEB.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-17FF3842.js" };
+var assets_manifest_default = { version: "ae15e3e2", entry: { module: "/build/entry.client-VBOTNMF5.js", imports: ["/build/_shared/chunk-3UWPWFUS.js", "/build/_shared/chunk-BNIZYPYA.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-XMSJCS5H.js", imports: ["/build/_shared/chunk-I534BYEB.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-MRG7BHH4.js", imports: ["/build/_shared/chunk-HH53KPYL.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/main": { id: "routes/main", parentId: "root", path: "main", index: void 0, caseSensitive: void 0, module: "/build/routes/main-HN6SN4NK.js", imports: ["/build/_shared/chunk-HH53KPYL.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/main/index": { id: "routes/main/index", parentId: "routes/main", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/main/index-MOTWO2WU.js", imports: ["/build/_shared/chunk-I534BYEB.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-AE15E3E2.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { unstable_cssModules: !1, unstable_cssSideEffectImports: !1, unstable_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, unstable_vanillaExtract: !1, v2_errorBoundary: !1, v2_meta: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

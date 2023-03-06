@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:root.tsx?browser"],
+  "sourcesContent": ["import { ChakraProvider } from \"@chakra-ui/react\";\nimport type { MetaFunction } from \"@remix-run/node\";\nimport {\n  Links,\n  LiveReload,\n  Meta,\n  Outlet,\n  Scripts,\n  ScrollRestoration,\n} from \"@remix-run/react\";\n\nexport const meta: MetaFunction = () => ({\n  charset: \"utf-8\",\n  title: \"New Remix App\",\n  viewport: \"width=device-width,initial-scale=1\",\n});\n\nexport default function App() {\n  return (\n    <html lang=\"en\">\n      <head>\n        <Meta />\n        <Links />\n      </head>\n      <body>\n        <ChakraProvider>\n          <Outlet />\n        </ChakraProvider>\n        <ScrollRestoration />\n        <Scripts />\n        <LiveReload />\n      </body>\n    </html>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAqBQ;AAVD,IAAM,OAAqB,OAAO;AAAA,EACvC,SAAS;AAAA,EACT,OAAO;AAAA,EACP,UAAU;AACZ;AAEe,SAAR,MAAuB;AAC5B,SACE,mDAAC,UAAK,MAAK,MACT;AAAA,uDAAC,UACC;AAAA,yDAAC,UAAD;AAAA;AAAA;AAAA;AAAA,aAAM;AAAA,MACN,mDAAC,WAAD;AAAA;AAAA;AAAA;AAAA,aAAO;AAAA,SAFT;AAAA;AAAA;AAAA;AAAA,WAGA;AAAA,IACA,mDAAC,UACC;AAAA,yDAAC,kBACC,6DAAC,YAAD;AAAA;AAAA;AAAA;AAAA,aAAQ,KADV;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA,MACA,mDAAC,uBAAD;AAAA;AAAA;AAAA;AAAA,aAAmB;AAAA,MACnB,mDAAC,aAAD;AAAA;AAAA;AAAA;AAAA,aAAS;AAAA,MACT,mDAAC,gBAAD;AAAA;AAAA;AAAA;AAAA,aAAY;AAAA,SANd;AAAA;AAAA;AAAA;AAAA,WAOA;AAAA,OAZF;AAAA;AAAA;AAAA;AAAA,SAaA;AAEJ;",
+  "names": []
+}

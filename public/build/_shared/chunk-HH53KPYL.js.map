@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/components/Header.tsx"],
+  "sourcesContent": ["import { Box, Text } from \"@chakra-ui/react\";\n\nexport default function Header() {\n  return (\n    <Box h={\"2rem\"} background={\"black\"} display={\"flex\"} justifyContent={\"center\"} alignItems={\"center\"}>\n      <Text color={\"white\"}>Todo List App</Text>\n    </Box>\n  );\n}"],
+  "mappings": ";;;;;;;;;;AAKM;AAHS,SAAR,SAA0B;AAC/B,SACE,mDAAC,OAAI,GAAG,QAAQ,YAAY,SAAS,SAAS,QAAQ,gBAAgB,UAAU,YAAY,UAC1F,6DAAC,QAAK,OAAO,SAAS,6BAAtB;AAAA;AAAA;AAAA;AAAA,SAAmC,KADrC;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}

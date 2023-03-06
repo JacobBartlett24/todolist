@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:routes/index.tsx?browser"],
+  "sourcesContent": ["import { Box, Input } from \"@chakra-ui/react\";\nimport { Outlet } from \"@remix-run/react\";\nimport Header from \"../components/Header\";\n\nexport default function Index() {\n  return (\n    <Box bg={\"black\"} height={\"100vh\"} display={\"flex\"} flexDir={\"column\"} alignItems={\"center\"}>\n      <Header />\n    </Box>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;;AAOM;AAHS,SAAR,QAAyB;AAC9B,SACE,mDAAC,OAAI,IAAI,SAAS,QAAQ,SAAS,SAAS,QAAQ,SAAS,UAAU,YAAY,UACjF,6DAAC,YAAD;AAAA;AAAA;AAAA;AAAA,SAAQ,KADV;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}
